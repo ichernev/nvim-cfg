@@ -1,0 +1,21 @@
+{
+    "diagnostic.checkCurrentLine": true,
+  "diagnostic-languageserver.filetypes": {
+    "python": ["mypy"]
+  },
+  "diagnostic-languageserver.linters": {
+      "mypy": {
+          "args": [
+              "di-main",
+            "--",
+            "mypy",
+            "--config",
+            ".mypy.config",
+            "$file"
+          ],
+        "command": "scripts/conda_run.sh"
+      }
+  },
+  "diagnostic-languageserver.debug": true,
+  "diagnostic-languageserver.trace.server": "verbose"
+}
